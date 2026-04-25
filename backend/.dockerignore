@@ -1,0 +1,10 @@
+target
+.git
+.mvn
+.env
+.env.example
+docker-compose.yml
+Dockerfile
+**/*.log
+**/*.tmp
+**/*.md
