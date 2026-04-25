@@ -14,7 +14,9 @@ services:
       retries: 10
 
   api:
-    build: .
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: colegio-api
     restart: always
     ports:

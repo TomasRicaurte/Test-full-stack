@@ -22,6 +22,12 @@ public class NotaController {
         return notaService.guardar(nota);
     }
 
+    // ✅ Listar todas las notas
+    @GetMapping
+    public List<Nota> listar() {
+        return notaService.listar();
+    }
+
     // ✅ Listar notas por alumno
     @GetMapping("/alumno/{id}")
     public List<Nota> listarPorAlumno(@PathVariable Long id) {
@@ -29,5 +35,11 @@ public class NotaController {
                 .stream()
                 .filter(n -> n.getAlumno().getId().equals(id))
                 .toList();
+    }
+
+    // ✅ Eliminar nota
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable Long id) {
+        notaService.eliminar(id);
     }
 }
