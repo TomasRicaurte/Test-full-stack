@@ -20,10 +20,10 @@ export default function AlumnoList({ refresh }) {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "30px" }}>
       <h3>Lista de Alumnos</h3>
       {alumnos.map((alumno) => (
-        <div key={alumno.id}>
+        <div key={alumno.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px", borderBottom: "1px solid #eee" }}   >
           <strong>
             {alumno.nombre} {alumno.apellido}
           </strong>

@@ -21,16 +21,16 @@ export default function MateriaList() {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "30px" }}>
       <MateriaForm onCreated={() => setRefresh(!refresh)} />
 
       <h3>Lista de Materias</h3>
 
       {materias.map((m) => (
-        <div key={m.id}>
-          <strong>{m.nombre}</strong> - {m.codigo} - {m.creditos}
+        <div key={m.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px", borderBottom: "1px solid #eee" }}>
+          <strong>{m.nombre}</strong>  {m.codigo}  {m.creditos}
 
-          <button onClick={() => handleDelete(m.id)}>
+          <button onClick={() => handleDelete(m.id)} style={{ marginLeft: "10px" }}>
             Eliminar
           </button>
         </div>

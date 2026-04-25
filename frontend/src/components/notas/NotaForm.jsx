@@ -43,11 +43,10 @@ export default function NotaForm({ onCreated }) {
   };
 
   return (
-    <div>
+    <div style={{ marginBottom: "30px" }}>
         <h3>Crear Nota</h3>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} >
 
-      {/* ALUMNO SELECT */}
       <select
         name="alumnoId"
         value={form.alumnoId}
@@ -61,7 +60,6 @@ export default function NotaForm({ onCreated }) {
         ))}
       </select>
 
-      {/* MATERIA SELECT */}
       <select
         name="materiaId"
         value={form.materiaId}
@@ -75,7 +73,6 @@ export default function NotaForm({ onCreated }) {
         ))}
       </select>
 
-      {/* NOTA */}
       <input
         name="valor"
         type="number"

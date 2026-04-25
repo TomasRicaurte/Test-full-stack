@@ -34,6 +34,7 @@ h2 {
 
 h3 {
   margin: 10px 0;
+  color: rgb(86, 86, 86);
 }
 
 /* Formularios */
@@ -90,4 +91,9 @@ button:hover {
 /* Separadores */
 .section {
   margin-bottom: 30px;
+}
+
+p{
+  margin: 5px;
+  padding-bottom: 1px;
 }
